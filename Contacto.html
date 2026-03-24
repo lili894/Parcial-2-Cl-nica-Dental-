@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Clínica Dental</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo-img">
+      <h1>Clínica Dental</h1>
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="Servicios.html">Servicios</a></li>
+      <li><a href="Nosotros.html">Nosotros</a></li>
+      <li><a href="Equipo.html">Equipo</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<div class="contacto-container">
+
+    <div class="imagen-contacto">
+    <img src="Contacto.png" alt="Contacto">
+  </div>
+
+   <section class="contenido contacto">
+
+    <h2>Contáctanos</h2>
+    <p>Agenda tu cita llenando el siguiente formulario:</p>
+
+    <form class="formulario" id="miFormulario">
+
+      <label>Apellidos</label>
+      <input type="text" id="apellidos" name="apellidos" required>
+
+      <label>Nombres</label>
+      <input type="text" id="nombres" name="nombres" required>
+
+      <label>Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label>Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label>Edad</label>
+      <input type="number" id="edad" name="edad" required>
+
+      <label>Género</label>
+      <input type="text" id="genero" name="genero" required>
+
+      <button type="submit">Enviar</button>
+
+    </form>
+
+    <p id="mensaje"></p>
+
+  </section>
+
+</div>
+
+<footer>
+  <p>Proyecto Parcial - Liliana Pat y Rebeca Cetina</p>
+</footer>
+
+<script>
+
+        const url="https://script.google.com/macros/s/AKfycbwqRjonhWbsF5Zy1ThfwQoUqHS8xmBJPVB15WDI8VxJuXeUJ5cRN0mY16qln1hrT-HgpQ/exec"
+
+        document.getElementById("miFormulario")
+        .addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const datos = {
+                apellidos: document.getElementById("apellidos").value,
+                nombres: document.getElementById("nombres").value,
+                telefono: document.getElementById("telefono").value,
+                correo: document.getElementById("correo").value,
+                edad: document.getElementById("edad").value,
+                genero: document.getElementById("genero").value
+
+
+            };
+
+            fetch(url,{
+                method: "POST",
+                body: JSON.stringify(datos)
+            }) 
+            
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("mensaje").innerHTML =
+                "Datos guardados correctamente ✔️";
+                document.getElementById("miFormulario").reset();
+            })
+            .catch(error =>{
+                document.getElementById("mensaje").innerHTML =
+                "Error al guardar ❌";
+                document.getElementById("miFormulario").reset();
+            });
+        
+        });
+
+    </script>
+
+</body>
+</html>

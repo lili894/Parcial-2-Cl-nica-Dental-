@@ -1,0 +1,238 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container h1 {
+  color: #1f2b5b;
+}
+
+.logo-img {
+  width: 50px;
+}
+
+main {
+  flex: 1;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-right: 60px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #48a19e;
+  font-weight: 500;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+.hero-text {
+  max-width: 420px;
+  margin-left: 60px;
+  padding: 35px;
+  border-radius: 25px;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.botones {
+  margin-top: 20px;
+}
+
+.btn {
+  background: #48a19e;
+  color: white;
+  padding: 12px 22px;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+.btn-outline {
+  border: 2px solid #48a19e;
+  padding: 12px 22px;
+  text-decoration: none;
+  color: #48a19e;
+  border-radius: 30px;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-img img {
+  height: 450px;
+  object-fit: contain;
+}
+
+.contenido {
+  flex: 1;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column; /* ← clave */
+  justify-content: center;
+}
+
+.contenido h2 {
+  font-size: 36px;
+  color: #1f2b5b;
+}
+
+.contenido p {
+  max-width: 600px;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.contacto-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+.imagen-contacto {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-contacto img {
+  height: 400px; /* ← ajusta tamaño */
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.contacto {
+  flex: 1;
+  padding: 0;
+}
+
+.formulario {
+  margin-top: 20px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.formulario button {
+  background: #48a19e;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: #3b8f8c;
+}
+
+
+.nosotros-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.nosotros-texto {
+  max-width: 500px;
+}
+
+.consultorio-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.consultorio-img img {
+  height: 400px;
+  object-fit: contain;
+}
+
+.doctor-img {
+  width: 100px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
+.card {
+  text-align: center;
+}
+
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  background: #86cfcc;
+}
